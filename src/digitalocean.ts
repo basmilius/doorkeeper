@@ -73,7 +73,9 @@ export async function updateInboundRules(
     id: firewall.id,
     name: firewall.name,
     inbound_rules: inboundRules,
-    outbound_rules: prepareOutboundRules(firewall.outbound_rules)
+    outbound_rules: prepareOutboundRules(firewall.outbound_rules),
+    droplet_ids: firewall.droplet_ids,
+    tags: firewall.tags
   };
 
   const {
